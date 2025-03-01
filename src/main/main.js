@@ -4,6 +4,7 @@ const { disableProxy, proxyStatus } = require('./module/system-proxy')
 require('./getData')
 require('./excel')
 require('./UIGFJson')
+require("./log")
 // require('./gists')
 const { getUpdateInfo } = require('./update/index')
 
@@ -33,7 +34,7 @@ if (!isFirstInstance) {
 
   app.whenReady().then(createWindow)
 
-  ipcMain.handle('RELAUNCH', async () => {
+  ipcMain.handle('RELAUNCH', async() => {
     app.relaunch()
     app.exit(0)
   })

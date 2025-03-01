@@ -1,21 +1,19 @@
 const itemTypeNameMap = require('../gachaType.json')
 
-const order = ['301', '302', '200', '500', '100']
+const order = ['1', '2', '3', '4', '5', '6', '7']
 
 function convertItemTypeMap(mapObject) {
-  const convertedItemTypeMap = new Map()
-  order.forEach(id => {
-    const itemType = mapObject.find(item => {
-      return item.key === id
+    const convertedItemTypeMap = new Map()
+    order.forEach(id => {
+        const itemType = mapObject.find(item => {
+            return item.key === id
+        })
+        convertedItemTypeMap.set(itemType.key, itemType.name)
     })
-    convertedItemTypeMap.set(itemType.key, itemType.name)
-  })
-  return convertedItemTypeMap
+    return convertedItemTypeMap
 }
 
-exports.getItemTypeNameMap = function(language) {
-  const lang = language.startsWith('zh-') || language.includes('-')
-    ? language
-    : Object.keys(itemTypeNameMap).find(key => key.startsWith(language + '-'))
-  return convertItemTypeMap(itemTypeNameMap[lang])
+exports.getItemTypeNameMap = function (language) {
+    const lang = Object.keys(itemTypeNameMap).find(key => key.startsWith(language + '-')) || 'zh-cn'
+    return convertItemTypeMap(itemTypeNameMap[lang])
 }

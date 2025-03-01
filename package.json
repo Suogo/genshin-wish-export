@@ -1,9 +1,9 @@
 {
-  "name": "genshin-wish-export",
-  "version": "0.11.9",
+  "name": "wuthering-waves-export",
+  "version": "1.0.4",
   "main": "./dist/electron/main/main.js",
-  "author": "biuuu <https://github.com/biuuu>",
-  "homepage": "https://github.com/biuuu/genshin-wish-export",
+  "author": "QAQQL <https://github.com/QAQQL>",
+  "homepage": "https://github.com/QAQQL/Wuthering-Waves-wish-export",
   "license": "MIT",
   "scripts": {
     "dev": "node .electron-vite/dev-runner.js",
@@ -19,7 +19,8 @@
     "start": "electron ./src/main/main.js",
     "build-update": "node .electron-vite/update.js",
     "dep:upgrade": "yarn upgrade-interactive --latest",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "git:action-build": "git tag v1.0.3 && git push origin v1.0.3"
   },
   "build": {
     "nsis": {
@@ -34,8 +35,8 @@
         "url": "http://127.0.0.1"
       }
     ],
-    "productName": "Genshin Wish Export",
-    "appId": "org.biuuu.genshin-wish-export",
+    "productName": "Wuthering Waves Export",
+    "appId": "org.ql.wuthering-waves-wish-export",
     "directories": {
       "output": "build"
     },
@@ -69,7 +70,6 @@
       "icon": "build/icons"
     }
   },
-  "dependencies": {},
   "devDependencies": {
     "@element-plus/icons-vue": "^0.2.6",
     "@rollup/plugin-alias": "^3.1.9",
@@ -87,9 +87,10 @@
     "cross-env": "^7.0.3",
     "del": "^6.0.0",
     "echarts": "^5.2.2",
-    "electron": "^16.0.7",
+    "electron": "29.0.1",
     "electron-builder": "^23.0.2",
     "electron-fetch": "^1.7.4",
+    "electron-log": "^5.1.7",
     "electron-unhandled": "^3.0.2",
     "electron-window-state": "^5.0.3",
     "element-plus": "^1.3.0-beta.7",
@@ -115,5 +116,6 @@
     "electron",
     "vue3",
     "rollup"
-  ]
+  ],
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

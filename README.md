@@ -1,30 +1,16 @@
-# 原神祈愿记录导出工具
+# 鸣潮祈愿记录导出工具
 
-中文 | [English](https://github.com/biuuu/genshin-wish-export/blob/main/docs/README_EN.md)
+中文 | [English](https://github.com/QAQQL/Wuthering-Waves-wish-export/blob/main/docs/README_EN.md)
 
 一个使用 Electron 制作的小工具，需要在 Windows 64位操作系统上运行。
 
-通过读取游戏日志或者代理模式获取访问游戏祈愿记录 API 所需的 authKey，然后再使用获取到的 authKey 来读取游戏祈愿记录。
+通过读取游戏日志或者代理模式获取访问游戏祈愿记录 API 所需的 URL，然后再使用获取到的 URL 来读取游戏祈愿记录。
 
 工具会在当前目录下的 `userData` 文件夹里保存数据，获取到新的祈愿记录时，会与本地数据合并后保存。
 
-需要更详细的数据分析，可以在导出 Excel 文件后使用这个项目的网页：[链接](https://github.com/voderl/genshin-gacha-analyzer)
-
-## 从 Excel 恢复数据
-https://genshin-gacha-export.danmu9.com
-
-可以通过这个网页从 Excel 文件导出 JSON 数据，也可以在网页上选择截止时间来去除重复数据。
-
-将下载的JSON文件复制到工具的 userData 文件夹即可恢复数据。
-
-使用网页时一定要确保填写正确的 UID， 选择正确的 Excel 文件里使用的语言。
-## 其它语言
-
-修改`src/i18n/`目录下的 json 文件就可以翻译到对应的语言。如果觉得已有的翻译有不准确或可以改进的地方，可以随时修改发 Pull Request。
-
 ## 使用说明
 
-1. 下载工具后解压 - 下载地址: [Github](https://github.com/biuuu/genshin-wish-export/releases/latest/download/Genshin-Wish-Export.zip) / [蓝奏云](https://wwvt.lanzoum.com/b01zxlweh) 密码：gepz
+1. 下载工具后解压 - 下载地址: [Github](https://github.com/QAQQL/Wuthering-Waves-wish-export/releases/latest/download/Wuthering-Waves-Wish-Export.zip) / [123盘](https://www.123pan.com/s/3e39-DyVQh.html)
 2. 打开游戏的祈愿历史记录
 
    ![祈愿历史记录](/docs/wish-history.png)
@@ -43,11 +29,14 @@ https://genshin-gacha-export.danmu9.com
 
 如果需要导出多个账号的数据，可以点击旁边的加号按钮。
 
-然后游戏切换的新账号，再打开祈愿历史记录，工具再点击“加载数据”按钮。
+然后 `Alt+F4` 大退游戏,重新打开切换的新账号，再打开祈愿历史记录，工具再点击“加载数据”按钮。
 
 ## Devlopment
 
 ```
+# 切换node 18
+nvm use 18.20.3
+
 # 安装模块
 yarn install
 
@@ -60,4 +49,13 @@ yarn build
 
 ## License
 
-[MIT](https://github.com/biuuu/genshin-wish-export/blob/main/LICENSE)
+[MIT](https://github.com/QAQQL/Wuthering-Waves-wish-export/blob/main/LICENSE)
+
+
+# 本项目代码来自 https://github.com/biuuu/genshin-wish-export
+## 如有侵权,请联系删除
+
+
+# 特别鸣谢
+- [biuuu - 原作者](https://github.com/biuuu)
+- [Arikatsu - 鸣潮数据源](https://github.com/Arikatsu/WutheringWaves_Data)
